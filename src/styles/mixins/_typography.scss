@@ -1,0 +1,15 @@
+@use "@/styles/tokens" as *;
+
+@mixin typography(
+  $size: $font-size-sm,
+  $line-height: $line-height-sm,
+  $weight: $font-weight-regular,
+  $color: $color-neutral-dark,
+  $family: $font-family-secondary
+) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
+  color: $color;
+  font-family: $family;
+}
