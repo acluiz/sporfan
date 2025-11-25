@@ -7,7 +7,7 @@ export const Container = ({
   customClass,
 }: {
   children: ReactNode;
-  customClass: string;
+  customClass?: string;
 }) => {
   return <div className={`${styles.container} ${customClass}`}>{children}</div>;
 };

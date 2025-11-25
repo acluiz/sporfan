@@ -1,0 +1,64 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.header {
+  padding: $spacing-sm 0;
+  background-color: $color-neutral-dark;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  @include typography(
+    $font-size-sm,
+    $line-height-sm,
+    $font-weight-regular,
+    $color-neutral-brightest,
+    $font-family-primary
+  );
+
+  span {
+    color: $color-primary;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+@keyframes line-run {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.link {
+  @include typography($color: $color-neutral-brightest);
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    bottom: -$spacing-nano;
+    height: $border-width-thin;
+  }
+
+  &:hover {
+    &::before {
+      animation: line-run 200ms forwards;
+      background-color: $color-primary;
+    }
+  }
+}

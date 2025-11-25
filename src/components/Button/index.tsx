@@ -15,9 +15,9 @@ export const Button = ({
   tagName?: "button" | "a";
   href?: string;
   ariaLabel?: string;
-  customClass: string;
-  onClick?: () => void;
+  customClass?: string;
   children: ReactNode;
+  onClick?: () => void;
 }) => {
   const Component = tagName;
 
