@@ -1,0 +1,65 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.hero {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-xl 0;
+  background-color: $color-neutral-dark;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin: auto 0;
+}
+
+.title {
+  @include typography(
+    $font-size-lg,
+    $line-height-lg,
+    $font-weight-regular,
+    transparent,
+    $font-family-primary
+  );
+
+  -webkit-text-stroke-width: $border-width-hairline;
+  -webkit-text-stroke-color: $color-neutral-brightest;
+
+  & > span {
+    @include typography(
+      $font-size-lg,
+      $line-height-lg,
+      $font-weight-regular,
+      transparent,
+      $font-family-primary
+    );
+    -webkit-text-stroke-color: $color-primary;
+  }
+}
+
+.subtitle {
+  @include typography(
+    $font-size-sm,
+    $line-height-sm,
+    $font-weight-regular,
+    $color-neutral-brightest,
+    $font-family-primary
+  );
+
+  margin-top: $spacing-sm;
+
+  span {
+    color: $color-primary;
+  }
+}
+
+.cta {
+  width: fit-content;
+  margin: auto auto 0;
+}

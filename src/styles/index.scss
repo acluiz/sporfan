@@ -1,9 +1,14 @@
+@use "@/styles/base" as *;
+
 @use "@/styles/mixins/typography" as *;
 @use "@/styles/tokens/colors" as *;
 
 * {
+  @include typography();
+
   margin: 0;
   padding: 0;
+  font-family: inherit;
   box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -13,8 +18,6 @@
   &::after {
     box-sizing: inherit;
   }
-
-  @include typography();
 }
 
 h1,

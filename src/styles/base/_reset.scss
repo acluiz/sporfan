@@ -24,13 +24,8 @@ button {
   cursor: pointer;
   border: none;
   background: transparent;
-  font-family: inherit;
 
   * {
     pointer-events: none;
   }
-}
-
-input {
-  font-family: inherit;
 }
