@@ -1,0 +1,56 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.match {
+  display: grid;
+  gap: $spacing-sm;
+  padding: $spacing-sm;
+  border-radius: $border-radius-sm;
+  border: $border-width-hairline solid $color-neutral-light;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score {
+  display: grid;
+  gap: $spacing-quarck;
+}
+
+.league {
+  display: flex;
+  align-items: center;
+  gap: $spacing-nano;
+}
+
+.leagueName {
+  @include typography(
+    $font-size-xs,
+    $line-height-xs,
+    $font-weight-medium,
+    $color-neutral-dark
+  );
+}
+
+.leagueImg {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.team {
+  @include typography();
+}
+
+.location {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: $spacing-sm;
+}
+
+.dateTime {
+  white-space: nowrap;
+  text-align: right;
+}

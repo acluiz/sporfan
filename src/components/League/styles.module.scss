@@ -1,0 +1,22 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.league {
+  display: flex;
+  align-items: center;
+  gap: $spacing-nano;
+}
+
+.img {
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.name {
+  @include typography(
+    $font-size-xs,
+    $line-height-xs,
+    $font-weight-medium,
+    $color-neutral-dark
+  );
+}

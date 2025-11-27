@@ -1,0 +1,19 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.banner {
+  width: 100%;
+  text-align: center;
+  padding: $spacing-md 0;
+  background-color: $color-primary;
+}
+
+.title {
+  @include typography(
+    $font-size-md,
+    $line-height-md,
+    $font-weight-regular,
+    $color-neutral-brightest,
+    $font-family-primary
+  );
+}

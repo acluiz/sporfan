@@ -1,0 +1,12 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.matches {
+  background-color: $color-neutral-bright;
+}
+
+.list {
+  display: grid;
+  gap: $spacing-sm;
+  padding: $spacing-sm 0;
+}

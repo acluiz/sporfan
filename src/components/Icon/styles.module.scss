@@ -1,0 +1,23 @@
+@use "@/styles/tokens/colors" as *;
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--small {
+    min-width: 16px;
+    max-width: 16px;
+  }
+
+  &--medium {
+    min-width: 24px;
+    max-width: 24px;
+  }
+
+  &--primary {
+    svg path {
+      stroke: $color-primary;
+    }
+  }
+}

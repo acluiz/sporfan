@@ -1,0 +1,17 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.iconText {
+  display: flex;
+  align-items: center;
+  gap: $spacing-nano;
+}
+
+.text {
+  @include typography(
+    $font-size-xs,
+    $line-height-xs,
+    $font-weight-medium,
+    $color-neutral-dark
+  );
+}
