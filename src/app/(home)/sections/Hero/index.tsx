@@ -19,7 +19,7 @@ export const Hero = () => {
           </p>
         </div>
 
-        <Button tagName="a" href="#" customClass={styles.cta}>
+        <Button tagName="a" href="#proximas-partidas" customClass={styles.cta}>
           próximas partidas
         </Button>
       </Container>

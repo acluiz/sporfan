@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 
 export const Matches = () => {
   return (
-    <section className={styles.matches}>
+    <section id="proximas-partidas" className={styles.matches}>
       <Banner text="Próximas partidas" />
 
       <Container customClass={styles.container}>
