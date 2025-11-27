@@ -1,0 +1,24 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins/typography" as *;
+
+.filters {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-align: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: $spacing-nano;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.filter {
+  @include typography($font-size-xs, $line-height-xs, $font-weight-medium);
+
+  scroll-snap-type: x mandatory;
+  padding: $spacing-quarck $spacing-xs;
+  border-radius: $border-radius-sm;
+  border: $border-width-hairline solid $color-primary;
+}

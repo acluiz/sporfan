@@ -1,12 +1,20 @@
 @use "@/styles/tokens" as *;
-@use "@/styles/mixins/typography" as *;
+@use "@/styles/mixins" as *;
 
 .matches {
   background-color: $color-neutral-bright;
 }
 
+.container {
+  padding: $spacing-md $spacing-sm;
+}
+
 .list {
   display: grid;
   gap: $spacing-sm;
-  padding: $spacing-sm 0;
+  margin-top: $spacing-sm;
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

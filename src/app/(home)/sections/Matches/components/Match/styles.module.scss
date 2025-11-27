@@ -15,29 +15,24 @@
   justify-content: space-between;
 }
 
+.status {
+  padding: $spacing-quarck $spacing-xs;
+  border-radius: $border-radius-sm;
+  border: $border-width-hairline solid $color-neutral-light;
+
+  & > p {
+    @include typography(
+      $font-size-xxs,
+      $line-height-xxs,
+      $font-weight-medium,
+      $color-neutral-dark
+    );
+  }
+}
+
 .score {
   display: grid;
   gap: $spacing-quarck;
-}
-
-.league {
-  display: flex;
-  align-items: center;
-  gap: $spacing-nano;
-}
-
-.leagueName {
-  @include typography(
-    $font-size-xs,
-    $line-height-xs,
-    $font-weight-medium,
-    $color-neutral-dark
-  );
-}
-
-.leagueImg {
-  aspect-ratio: 3/2;
-  object-fit: contain;
 }
 
 .team {

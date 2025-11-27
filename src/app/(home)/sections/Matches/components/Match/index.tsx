@@ -11,7 +11,9 @@ export const Match = () => {
       <div className={styles.row}>
         <League name="Premier League" img="/images/25.png" />
 
-        <IconText icon="clock" text="21:00" customClass={styles.dateTime} />
+        <div className={styles.status}>
+          <p>Finalizado</p>
+        </div>
       </div>
 
       <dl className={styles.score}>
@@ -25,7 +27,10 @@ export const Match = () => {
         </div>
       </dl>
 
-      <IconText icon="map-pin" text="Rio de Janeiro, Brasil" />
+      <div className={styles.row}>
+        <IconText icon="map-pin" text="Rio de Janeiro, Brasil" />
+        <IconText icon="clock" text="21:00" customClass={styles.dateTime} />
+      </div>
     </div>
   );
 };
